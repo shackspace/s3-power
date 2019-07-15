@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": "index.js",
   "dependencies": {
     "aws-sdk": "^2.97.0",
     "moment": "^2.18.1",

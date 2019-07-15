@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var cron = require('node-cron');
 var moment = require('moment')
 var AWS = require('aws-sdk');
