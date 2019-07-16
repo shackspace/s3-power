@@ -13,19 +13,17 @@ var net = require('net');
 
 var client = new net.Socket();
 
-var ret = client.on('data', function(data) {
+client.on('data', function(data) {
   uploadData(data.toString('utf8'));
 });
 
-var ret = client.on('close', function() {
+client.on('close', function() {
   console.log('Connection closed');
 });
 
 
-cron.schedule('0 0 0 * * *', function(){
-	var ret = client.connect(11111, 'powerraw.shack', function() {
-		console.log('Connected');
-	});
+client.connect(11111, 'powerraw.shack', function() {
+  console.log('Connected');
 });
 
 
