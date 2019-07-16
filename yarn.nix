@@ -84,15 +84,6 @@
     }
 
     {
-      name = "node-cron-1.2.1.tgz";
-      path = fetchurl {
-        name = "node-cron-1.2.1.tgz";
-        url  = "https://registry.yarnpkg.com/node-cron/-/node-cron-1.2.1.tgz";
-        sha1 = "8c90bc5dc723a56289b0786655ab4a1c4cb60368";
-      };
-    }
-
-    {
       name = "punycode-1.3.2.tgz";
       path = fetchurl {
         name = "punycode-1.3.2.tgz";
