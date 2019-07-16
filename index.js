@@ -28,15 +28,12 @@ client.connect(11111, 'powerraw.shack', function() {
 
 
 function uploadData(strval) {
-	var regex = /Current epoch time: ([0-9]+)\n([\s\S]*)/
-	result = strval.match(regex)
-
 	client.destroy();
 
 	var params = {
 		Bucket: 'shack-s3',
 		Key: 'powerraw.shack/' + moment().format('X'),
-		Body: result[2]
+		Body: strval
 	};
 
 	s3.putObject(params, function(err, data) {
